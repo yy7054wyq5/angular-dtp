@@ -1,0 +1,38 @@
+{
+  "/purchase": {
+    "target":"http://academy.maitrox.com:36881/",
+    "changeOrigin": true,
+    "secure": false,
+    "logLevel": "debug"
+  },
+  "/core": {
+    "target": "http://academy.maitrox.com:36881/",
+    "changeOrigin": true,
+    "secure": false,
+    "logLevel": "debug"
+  },
+  "/sales": {
+    "target": "http://academy.maitrox.com:36881/",
+    "changeOrigin": true,
+    "secure": false,
+    "logLevel": "debug"
+  },
+  "/basicdata": {
+    "target": "http://academy.maitrox.com:36881/",
+    "changeOrigin": true,
+    "secure": false,
+    "logLevel": "debug"
+  },
+  "/warehouse": {
+    "target": "http://academy.maitrox.com:36881/",
+    "changeOrigin": true,
+    "secure": false,
+    "logLevel": "debug"
+  },
+  "/plan": {
+    "target": "http://academy.maitrox.com:36881/",
+    "changeOrigin": true,
+    "secure": false,
+    "logLevel": "debug"
+  }
+}

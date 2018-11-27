@@ -1,0 +1,711 @@
+{
+  "status": 0,
+  "msg": "success",
+  "data": {
+    "list": [
+      {
+        "id": 77,
+        "state_key": "aaaa",
+        "key_name": "{\"en\": \"a\", \"th\": \"a\", \"zh\": \"a\"}",
+        "updated_at": "2018-07-31 10:09:20",
+        "create_user_name": "admin",
+        "actions": [
+          {
+            "action": "detail",
+            "action_type": "common",
+            "label": { "en": "View Detail", "zh": "\u67e5\u770b\u8be6\u60c5", "th": "View Detail" },
+            "api": null,
+            "request_method": null,
+            "action_element": "button",
+            "action_data": null,
+            "icon": null
+          },
+          {
+            "action": "edit",
+            "action_type": "common",
+            "label": { "en": "Edit", "zh": "\u7f16\u8f91", "th": "Edit" },
+            "api": null,
+            "request_method": null,
+            "action_element": "button",
+            "action_data": null,
+            "icon": null
+          },
+          {
+            "action": "delete",
+            "action_type": "common",
+            "label": { "en": "Delete", "zh": "\u5220\u9664", "th": "Delete" },
+            "api": "/core/state-key/77",
+            "request_method": "delete",
+            "action_element": "button",
+            "action_data": null,
+            "icon": null
+          }
+        ]
+      },
+      {
+        "id": 76,
+        "state_key": "12",
+        "key_name": "{\"en\": \"12\", \"th\": null, \"zh\": null}",
+        "updated_at": "2018-07-26 08:23:50",
+        "create_user_name": "admin",
+        "actions": [
+          {
+            "action": "detail",
+            "action_type": "common",
+            "label": { "en": "View Detail", "zh": "\u67e5\u770b\u8be6\u60c5", "th": "View Detail" },
+            "api": null,
+            "request_method": null,
+            "action_element": "button",
+            "action_data": null,
+            "icon": null
+          },
+          {
+            "action": "edit",
+            "action_type": "common",
+            "label": { "en": "Edit", "zh": "\u7f16\u8f91", "th": "Edit" },
+            "api": null,
+            "request_method": null,
+            "action_element": "button",
+            "action_data": null,
+            "icon": null
+          },
+          {
+            "action": "delete",
+            "action_type": "common",
+            "label": { "en": "Delete", "zh": "\u5220\u9664", "th": "Delete" },
+            "api": "/core/state-key/76",
+            "request_method": "delete",
+            "action_element": "button",
+            "action_data": null,
+            "icon": null
+          }
+        ]
+      },
+      {
+        "id": 70,
+        "state_key": "notifySendStatus",
+        "key_name": "{\"en\": \"notify Send Status\", \"th\": \"notify Send Status\", \"zh\": \"\u901a\u77e5\u7ec4\u53d1\u9001\u72b6\u6001\"}",
+        "updated_at": "2018-07-10 01:09:50",
+        "create_user_name": "admin",
+        "actions": [
+          {
+            "action": "detail",
+            "action_type": "common",
+            "label": { "en": "View Detail", "zh": "\u67e5\u770b\u8be6\u60c5", "th": "View Detail" },
+            "api": null,
+            "request_method": null,
+            "action_element": "button",
+            "action_data": null,
+            "icon": null
+          },
+          {
+            "action": "edit",
+            "action_type": "common",
+            "label": { "en": "Edit", "zh": "\u7f16\u8f91", "th": "Edit" },
+            "api": null,
+            "request_method": null,
+            "action_element": "button",
+            "action_data": null,
+            "icon": null
+          },
+          {
+            "action": "delete",
+            "action_type": "common",
+            "label": { "en": "Delete", "zh": "\u5220\u9664", "th": "Delete" },
+            "api": "/core/state-key/70",
+            "request_method": "delete",
+            "action_element": "button",
+            "action_data": null,
+            "icon": null
+          }
+        ]
+      },
+      {
+        "id": 75,
+        "state_key": "inventoryType",
+        "key_name": "{\"en\": \"Inventory Type\", \"th\": \"Inventory Type\", \"zh\": \"\u5e93\u5b58\u7c7b\u578b\"}",
+        "updated_at": "2018-07-10 01:09:50",
+        "create_user_name": "admin",
+        "actions": [
+          {
+            "action": "detail",
+            "action_type": "common",
+            "label": { "en": "View Detail", "zh": "\u67e5\u770b\u8be6\u60c5", "th": "View Detail" },
+            "api": null,
+            "request_method": null,
+            "action_element": "button",
+            "action_data": null,
+            "icon": null
+          },
+          {
+            "action": "edit",
+            "action_type": "common",
+            "label": { "en": "Edit", "zh": "\u7f16\u8f91", "th": "Edit" },
+            "api": null,
+            "request_method": null,
+            "action_element": "button",
+            "action_data": null,
+            "icon": null
+          },
+          {
+            "action": "delete",
+            "action_type": "common",
+            "label": { "en": "Delete", "zh": "\u5220\u9664", "th": "Delete" },
+            "api": "/core/state-key/75",
+            "request_method": "delete",
+            "action_element": "button",
+            "action_data": null,
+            "icon": null
+          }
+        ]
+      },
+      {
+        "id": 68,
+        "state_key": "logisticsNodeType",
+        "key_name": "{\"en\": \"logistics Node Type\", \"th\": \"logistics Node Type\", \"zh\": \"\u7269\u6d41\u8282\u70b9\u7c7b\u522b\"}",
+        "updated_at": "2018-07-09 08:48:24",
+        "create_user_name": "admin",
+        "actions": [
+          {
+            "action": "detail",
+            "action_type": "common",
+            "label": { "en": "View Detail", "zh": "\u67e5\u770b\u8be6\u60c5", "th": "View Detail" },
+            "api": null,
+            "request_method": null,
+            "action_element": "button",
+            "action_data": null,
+            "icon": null
+          },
+          {
+            "action": "edit",
+            "action_type": "common",
+            "label": { "en": "Edit", "zh": "\u7f16\u8f91", "th": "Edit" },
+            "api": null,
+            "request_method": null,
+            "action_element": "button",
+            "action_data": null,
+            "icon": null
+          },
+          {
+            "action": "delete",
+            "action_type": "common",
+            "label": { "en": "Delete", "zh": "\u5220\u9664", "th": "Delete" },
+            "api": "/core/state-key/68",
+            "request_method": "delete",
+            "action_element": "button",
+            "action_data": null,
+            "icon": null
+          }
+        ]
+      },
+      {
+        "id": 74,
+        "state_key": "inventoryIoMode",
+        "key_name": "{\"en\": \"Inventory IO Mode\", \"th\": \"Inventory IO Mode\", \"zh\": \"\u5e93\u5b58\u51fa\u5165\u6a21\u5f0f\"}",
+        "updated_at": "2018-07-09 08:48:24",
+        "create_user_name": "admin",
+        "actions": [
+          {
+            "action": "detail",
+            "action_type": "common",
+            "label": { "en": "View Detail", "zh": "\u67e5\u770b\u8be6\u60c5", "th": "View Detail" },
+            "api": null,
+            "request_method": null,
+            "action_element": "button",
+            "action_data": null,
+            "icon": null
+          },
+          {
+            "action": "edit",
+            "action_type": "common",
+            "label": { "en": "Edit", "zh": "\u7f16\u8f91", "th": "Edit" },
+            "api": null,
+            "request_method": null,
+            "action_element": "button",
+            "action_data": null,
+            "icon": null
+          },
+          {
+            "action": "delete",
+            "action_type": "common",
+            "label": { "en": "Delete", "zh": "\u5220\u9664", "th": "Delete" },
+            "api": "/core/state-key/74",
+            "request_method": "delete",
+            "action_element": "button",
+            "action_data": null,
+            "icon": null
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "state_key": "sex",
+        "key_name": "{\"en\": \"Sex\", \"th\": \"\", \"zh\": \"\u6027\u522b\"}",
+        "updated_at": "2018-06-02 03:19:00",
+        "create_user_name": null,
+        "actions": [
+          {
+            "action": "detail",
+            "action_type": "common",
+            "label": { "en": "View Detail", "zh": "\u67e5\u770b\u8be6\u60c5", "th": "View Detail" },
+            "api": null,
+            "request_method": null,
+            "action_element": "button",
+            "action_data": null,
+            "icon": null
+          },
+          {
+            "action": "edit",
+            "action_type": "common",
+            "label": { "en": "Edit", "zh": "\u7f16\u8f91", "th": "Edit" },
+            "api": null,
+            "request_method": null,
+            "action_element": "button",
+            "action_data": null,
+            "icon": null
+          },
+          {
+            "action": "delete",
+            "action_type": "common",
+            "label": { "en": "Delete", "zh": "\u5220\u9664", "th": "Delete" },
+            "api": "/core/state-key/1",
+            "request_method": "delete",
+            "action_element": "button",
+            "action_data": null,
+            "icon": null
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "state_key": "purchaseType",
+        "key_name": "{\"en\": \"Purchase Type\", \"th\": \"\", \"zh\": \"\u91c7\u8d2d\u7c7b\u578b\"}",
+        "updated_at": "2018-06-02 03:19:00",
+        "create_user_name": null,
+        "actions": [
+          {
+            "action": "detail",
+            "action_type": "common",
+            "label": { "en": "View Detail", "zh": "\u67e5\u770b\u8be6\u60c5", "th": "View Detail" },
+            "api": null,
+            "request_method": null,
+            "action_element": "button",
+            "action_data": null,
+            "icon": null
+          },
+          {
+            "action": "edit",
+            "action_type": "common",
+            "label": { "en": "Edit", "zh": "\u7f16\u8f91", "th": "Edit" },
+            "api": null,
+            "request_method": null,
+            "action_element": "button",
+            "action_data": null,
+            "icon": null
+          },
+          {
+            "action": "delete",
+            "action_type": "common",
+            "label": { "en": "Delete", "zh": "\u5220\u9664", "th": "Delete" },
+            "api": "/core/state-key/2",
+            "request_method": "delete",
+            "action_element": "button",
+            "action_data": null,
+            "icon": null
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "state_key": "warrantyStatus",
+        "key_name": "{\"en\": \"Warranty Status\", \"th\": \"\", \"zh\": \"\u8d28\u4fdd\u72b6\u6001\"}",
+        "updated_at": "2018-06-02 03:19:00",
+        "create_user_name": null,
+        "actions": [
+          {
+            "action": "detail",
+            "action_type": "common",
+            "label": { "en": "View Detail", "zh": "\u67e5\u770b\u8be6\u60c5", "th": "View Detail" },
+            "api": null,
+            "request_method": null,
+            "action_element": "button",
+            "action_data": null,
+            "icon": null
+          },
+          {
+            "action": "edit",
+            "action_type": "common",
+            "label": { "en": "Edit", "zh": "\u7f16\u8f91", "th": "Edit" },
+            "api": null,
+            "request_method": null,
+            "action_element": "button",
+            "action_data": null,
+            "icon": null
+          },
+          {
+            "action": "delete",
+            "action_type": "common",
+            "label": { "en": "Delete", "zh": "\u5220\u9664", "th": "Delete" },
+            "api": "/core/state-key/3",
+            "request_method": "delete",
+            "action_element": "button",
+            "action_data": null,
+            "icon": null
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "state_key": "purchaseOrderType",
+        "key_name": "{\"en\": \"Purchase Order Type\", \"th\": \"\", \"zh\": \"\u91c7\u8d2d\u5355\u7c7b\u578b\"}",
+        "updated_at": "2018-06-02 03:19:00",
+        "create_user_name": null,
+        "actions": [
+          {
+            "action": "detail",
+            "action_type": "common",
+            "label": { "en": "View Detail", "zh": "\u67e5\u770b\u8be6\u60c5", "th": "View Detail" },
+            "api": null,
+            "request_method": null,
+            "action_element": "button",
+            "action_data": null,
+            "icon": null
+          },
+          {
+            "action": "edit",
+            "action_type": "common",
+            "label": { "en": "Edit", "zh": "\u7f16\u8f91", "th": "Edit" },
+            "api": null,
+            "request_method": null,
+            "action_element": "button",
+            "action_data": null,
+            "icon": null
+          },
+          {
+            "action": "delete",
+            "action_type": "common",
+            "label": { "en": "Delete", "zh": "\u5220\u9664", "th": "Delete" },
+            "api": "/core/state-key/4",
+            "request_method": "delete",
+            "action_element": "button",
+            "action_data": null,
+            "icon": null
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "state_key": "partType",
+        "key_name": "{\"en\": \"Part Type\", \"th\": \"\", \"zh\": \"\u5907\u4ef6\u7c7b\u578b\"}",
+        "updated_at": "2018-06-02 03:19:00",
+        "create_user_name": null,
+        "actions": [
+          {
+            "action": "detail",
+            "action_type": "common",
+            "label": { "en": "View Detail", "zh": "\u67e5\u770b\u8be6\u60c5", "th": "View Detail" },
+            "api": null,
+            "request_method": null,
+            "action_element": "button",
+            "action_data": null,
+            "icon": null
+          },
+          {
+            "action": "edit",
+            "action_type": "common",
+            "label": { "en": "Edit", "zh": "\u7f16\u8f91", "th": "Edit" },
+            "api": null,
+            "request_method": null,
+            "action_element": "button",
+            "action_data": null,
+            "icon": null
+          },
+          {
+            "action": "delete",
+            "action_type": "common",
+            "label": { "en": "Delete", "zh": "\u5220\u9664", "th": "Delete" },
+            "api": "/core/state-key/5",
+            "request_method": "delete",
+            "action_element": "button",
+            "action_data": null,
+            "icon": null
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "state_key": "purchaseOrderStatus",
+        "key_name": "{\"en\": \"Purchase Order Status\", \"th\": \"\", \"zh\": \"\u91c7\u8d2d\u5355\u72b6\u6001\"}",
+        "updated_at": "2018-06-02 03:19:00",
+        "create_user_name": null,
+        "actions": [
+          {
+            "action": "detail",
+            "action_type": "common",
+            "label": { "en": "View Detail", "zh": "\u67e5\u770b\u8be6\u60c5", "th": "View Detail" },
+            "api": null,
+            "request_method": null,
+            "action_element": "button",
+            "action_data": null,
+            "icon": null
+          },
+          {
+            "action": "edit",
+            "action_type": "common",
+            "label": { "en": "Edit", "zh": "\u7f16\u8f91", "th": "Edit" },
+            "api": null,
+            "request_method": null,
+            "action_element": "button",
+            "action_data": null,
+            "icon": null
+          },
+          {
+            "action": "delete",
+            "action_type": "common",
+            "label": { "en": "Delete", "zh": "\u5220\u9664", "th": "Delete" },
+            "api": "/core/state-key/6",
+            "request_method": "delete",
+            "action_element": "button",
+            "action_data": null,
+            "icon": null
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "state_key": "purchaseOrderPartStatus",
+        "key_name": "{\"en\": \"Purchase Order Part Status\", \"th\": \"\", \"zh\": \"\u91c7\u8d2d\u5355\u5907\u4ef6\u72b6\u6001\"}",
+        "updated_at": "2018-06-02 03:19:00",
+        "create_user_name": null,
+        "actions": [
+          {
+            "action": "detail",
+            "action_type": "common",
+            "label": { "en": "View Detail", "zh": "\u67e5\u770b\u8be6\u60c5", "th": "View Detail" },
+            "api": null,
+            "request_method": null,
+            "action_element": "button",
+            "action_data": null,
+            "icon": null
+          },
+          {
+            "action": "edit",
+            "action_type": "common",
+            "label": { "en": "Edit", "zh": "\u7f16\u8f91", "th": "Edit" },
+            "api": null,
+            "request_method": null,
+            "action_element": "button",
+            "action_data": null,
+            "icon": null
+          },
+          {
+            "action": "delete",
+            "action_type": "common",
+            "label": { "en": "Delete", "zh": "\u5220\u9664", "th": "Delete" },
+            "api": "/core/state-key/7",
+            "request_method": "delete",
+            "action_element": "button",
+            "action_data": null,
+            "icon": null
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "state_key": "approveStatus",
+        "key_name": "{\"en\": \"Approve Status\", \"th\": \"\", \"zh\": \"\u5ba1\u6838\u72b6\u6001\"}",
+        "updated_at": "2018-06-02 03:19:00",
+        "create_user_name": null,
+        "actions": [
+          {
+            "action": "detail",
+            "action_type": "common",
+            "label": { "en": "View Detail", "zh": "\u67e5\u770b\u8be6\u60c5", "th": "View Detail" },
+            "api": null,
+            "request_method": null,
+            "action_element": "button",
+            "action_data": null,
+            "icon": null
+          },
+          {
+            "action": "edit",
+            "action_type": "common",
+            "label": { "en": "Edit", "zh": "\u7f16\u8f91", "th": "Edit" },
+            "api": null,
+            "request_method": null,
+            "action_element": "button",
+            "action_data": null,
+            "icon": null
+          },
+          {
+            "action": "delete",
+            "action_type": "common",
+            "label": { "en": "Delete", "zh": "\u5220\u9664", "th": "Delete" },
+            "api": "/core/state-key/8",
+            "request_method": "delete",
+            "action_element": "button",
+            "action_data": null,
+            "icon": null
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "state_key": "lifecycleType",
+        "key_name": "{\"en\": \"Lifecycle Type\", \"th\": \"\", \"zh\": \"\u751f\u547d\u5468\u671f\"}",
+        "updated_at": "2018-06-02 03:19:00",
+        "create_user_name": null,
+        "actions": [
+          {
+            "action": "detail",
+            "action_type": "common",
+            "label": { "en": "View Detail", "zh": "\u67e5\u770b\u8be6\u60c5", "th": "View Detail" },
+            "api": null,
+            "request_method": null,
+            "action_element": "button",
+            "action_data": null,
+            "icon": null
+          },
+          {
+            "action": "edit",
+            "action_type": "common",
+            "label": { "en": "Edit", "zh": "\u7f16\u8f91", "th": "Edit" },
+            "api": null,
+            "request_method": null,
+            "action_element": "button",
+            "action_data": null,
+            "icon": null
+          },
+          {
+            "action": "delete",
+            "action_type": "common",
+            "label": { "en": "Delete", "zh": "\u5220\u9664", "th": "Delete" },
+            "api": "/core/state-key/9",
+            "request_method": "delete",
+            "action_element": "button",
+            "action_data": null,
+            "icon": null
+          }
+        ]
+      }
+    ],
+    "page": { "page_number": 1, "size": 15, "total_elements": 62, "total_pages": 5 },
+    "columns": [
+      {
+        "listable": true,
+        "display_name": { "en": "id", "th": "id", "zh": "id" },
+        "data_type": "string",
+        "tooltip": null,
+        "alignment": "left",
+        "hidden": true,
+        "list_seq": 99,
+        "list_actived": true,
+        "width": null,
+        "prop": "id"
+      },
+      {
+        "listable": true,
+        "display_name": { "en": "state key", "th": "state key", "zh": "\u72b6\u6001\u952e" },
+        "data_type": "string",
+        "tooltip": null,
+        "alignment": "left",
+        "hidden": false,
+        "list_seq": 99,
+        "list_actived": true,
+        "width": null,
+        "prop": "state_key",
+        "list_lock": true
+      },
+      {
+        "listable": true,
+        "display_name": { "en": "key name", "th": "key name", "zh": "\u952e\u540d" },
+        "data_type": "string",
+        "tooltip": null,
+        "alignment": "left",
+        "hidden": false,
+        "list_seq": 99,
+        "list_actived": true,
+        "width": null,
+        "prop": "key_name"
+      },
+      {
+        "listable": true,
+        "display_name": { "en": "updated at", "th": "updated at", "zh": "\u4fee\u6539\u65f6\u95f4" },
+        "data_type": "string",
+        "tooltip": null,
+        "alignment": "left",
+        "hidden": false,
+        "list_seq": 99,
+        "list_actived": true,
+        "width": null,
+        "prop": "updated_at"
+      },
+      {
+        "listable": true,
+        "display_name": { "en": "create user name", "th": "create user name", "zh": "\u521b\u5efa\u7528\u6237" },
+        "data_type": "string",
+        "tooltip": null,
+        "alignment": "left",
+        "hidden": false,
+        "list_seq": 99,
+        "list_actived": true,
+        "width": null,
+        "prop": "create_user_name"
+      }
+    ],
+    "toolbar": [
+      {
+        "action": "add",
+        "action_type": "common",
+        "label": { "en": "Add Item", "zh": "\u65b0\u589e", "th": "Add Item" },
+        "api": null,
+        "request_method": null,
+        "action_element": "button",
+        "action_data": null,
+        "icon": "anticon anticon-plus-square"
+      },
+      {
+        "action": "import",
+        "action_type": "common",
+        "label": { "en": "Import", "zh": "\u5bfc\u5165", "th": "Import" },
+        "api": "/core/state-key/import",
+        "request_method": null,
+        "action_element": "button",
+        "action_data": null,
+        "icon": null
+      },
+      {
+        "action": "generate_import_tmp",
+        "action_type": "common",
+        "label": { "en": "Import Template Download", "zh": "\u4e0b\u8f7d\u5bfc\u5165\u6a21\u677f", "th": "Import Template Download" },
+        "api": "/core/state-key/import-template-file",
+        "request_method": "get",
+        "action_element": "button",
+        "action_data": null,
+        "icon": null
+      },
+      {
+        "action": "export",
+        "action_type": "common",
+        "label": { "en": "Export", "zh": "\u5bfc\u51fa", "th": "Export" },
+        "api": "/core/state-key/export",
+        "request_method": "get",
+        "action_element": "button",
+        "action_data": null,
+        "icon": null
+      },
+      {
+        "action": "config",
+        "action_type": "common",
+        "label": { "en": "Config", "zh": "\u9875\u9762\u914d\u7f6e", "th": "Config" },
+        "api": "",
+        "request_method": null,
+        "action_element": "button",
+        "action_data": null,
+        "icon": null
+      }
+    ],
+    "query": [],
+    "page_name": "state-key"
+  }
+}

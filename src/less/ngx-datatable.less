@@ -1,0 +1,131 @@
+@import './variable.less';
+//
+// 表格样式
+//
+@import '../../node_modules/@swimlane/ngx-datatable/release/index.css';
+.ngx-datatable {
+  border: 1px solid @tableBorderColor;
+  background: #fff;
+  font-size: 13px;
+}
+
+.datatable-header {
+  border-bottom: 1px solid @tableBorderColor;
+  background: #fff;
+  .datatable-row-left,
+  .datatable-row-right {
+    background: #fff;
+  }
+  .datatable-header-cell {
+    padding: 2px;
+    &.resizeable {
+      border-left: 1px solid @tableHeaderBgColor;
+      border-right: 1px solid @tableHeaderBgColor;
+      &:hover {
+        border-left: 1px solid @tableBorderColor;
+        border-right: 1px solid @tableBorderColor;
+      }
+    }
+  }
+}
+
+.datatable-body {
+  .datatable-body-row {
+    nz-tag {
+      >span {
+        width: 100%;
+        text-align: center;
+      }
+    }
+    border-bottom: 1px solid @tableBorderColor;
+    &.datatable-row-even {
+      background: #f9f9f9;
+      .datatable-row-left,
+      .datatable-row-right {
+        background: #f9f9f9;
+      }
+    }
+    &:hover {
+      background: whitesmoke;
+      .datatable-row-left,
+      .datatable-row-right {
+        background: whitesmoke;
+      }
+    }
+  } // fix于左边的
+  .datatable-row-left,
+  .datatable-row-right {
+    background: #fff;
+  }
+}
+
+.datatable-footer {
+  border-top: 0;
+}
+
+// 自定义单元格
+.datatable-body-cell-label {
+  height: 100%;
+  .editCell {
+    &.noSave {
+      background: @warningColor;
+      color: #fff;
+    }
+  }
+  >div {
+    height: 100%;
+    .scm-body-cell {
+      height: 100%;
+      width: 100%; // padding: 8px 12px 12px 12px;
+      padding: 0; // min-height: 30px;
+      display: flex;
+      align-items: center;
+      &.action {
+        padding: 0 12px;
+      }
+      .cell-color {
+        display: inline-block;
+        width: 30px;
+        height: 20px;
+      }
+      .cell-link {
+        width: 80px;
+        overflow: hidden;
+        display: inline-block;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+      .cell-img {
+        display: inline-block;
+        height: 30px;
+      }
+    }
+  }
+}
+
+// 表脚
+.custom-table-footer {
+  width: 100%;
+  padding: 4px;
+  display: flex;
+  justify-content: space-between;
+  .total {
+    padding-top: 4px;
+  }
+}
+
+// 图片单元格模板样式
+.cell-source-img-wrap {
+  width: 100%;
+  text-align: center;
+  .cell-source-img {
+    display: inline-block;
+    max-width: 750px;
+  }
+}
+
+// 表格操作图标
+.cell-handle-icon {
+  margin-right: 5px;
+  cursor: pointer;
+}

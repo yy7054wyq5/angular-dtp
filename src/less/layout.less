@@ -1,0 +1,128 @@
+@import './variable.less';
+@import './mixin.less';
+// 下拉菜单图标颜色
+.ant-dropdown-menu {
+  li {
+    i {
+      color: @iconColor;
+    }
+  }
+}
+
+//
+// 表单样式
+//
+.ant-select-lz {
+  position: relative;
+  display: inline-block;
+  padding: 4px 7px;
+  width: 100%;
+  height: 32px;
+  font-size: @fontSize;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.65);
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid @fromItemBorderColor;
+  border-radius: 4px;
+  transition: all 0.3s;
+  &.large {
+    height: 32px;
+  }
+  &[disabled] {
+    color: @disabledColor;
+    cursor: not-allowed;
+    background-color: @disabledBgColor;
+  }
+}
+
+nz-select,
+nz-cascader {
+  width: 100%;
+}
+
+.ant-input-lz {
+  width: 100%;
+  border: 1px solid @fromItemBorderColor;
+  border-radius: 4px;
+  height: 28px;
+  padding-left: 4px;
+  transition: all 0.3s;
+  resize: none;
+  &.large {
+    height: 32px;
+  }
+  &:focus {
+    border-color: #49a9ee;
+    outline: 0;
+    box-shadow: 0 0 0 2px rgba(16, 142, 233, 0.2);
+  }
+  &[disabled] {
+    color: @disabledColor;
+    cursor: not-allowed;
+    background-color: @disabledBgColor;
+  }
+}
+
+//
+// a 标签作为按钮的样式
+//
+a.ant-btn.ant-btn-lg {
+  line-height: 32px;
+}
+
+a.ant-btn.ant-btn-sm {
+  line-height: 22px;
+}
+
+a.ant-btn.ant-btn-default {
+  line-height: 28px;
+}
+
+//
+// 全局隐藏class
+//
+.hidden {
+  display: none;
+}
+
+.show {
+  display: inline-block;
+}
+
+.relative {
+  position: relative;
+}
+
+.success {
+  color: @successColor;
+}
+
+.fail {
+  color: @failColor;
+}
+
+.progressing {
+  color: @progressingColor;
+}
+
+//
+// 图片预览模式隐藏图片上的操作按钮
+//
+.hidden-img-handle {
+  .anticon-delete {
+    display: none;
+  }
+}
+
+// keep-req-process-panel.service style
+.hide-close-btn {
+  .ant-modal-close {
+    display: none;
+  }
+}
+
+a[href] {
+  color: @themeColor;
+  text-decoration: underline;
+}

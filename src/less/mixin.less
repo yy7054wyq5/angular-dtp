@@ -1,0 +1,37 @@
+@import './variable.less';
+
+.page-min-width(@width: @pageMinWidth) {
+  min-width: @width;
+}
+
+.scm-active(@color: @themeColor) {
+  border-color: @color;
+  outline: 0;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+  border-right-width: 1px !important;
+}
+
+// 单行省略号
+.line-ellipsis(@width) {
+  width: @width;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+// 多行省略号
+.lines-ellipsis(@width, @lines: 2) {
+  .line-ellipsis(@width);
+  display: -webkit-box;
+  white-space: normal;
+  -webkit-line-clamp: @lines;
+  -webkit-box-orient: vertical;
+}
+
+// 错误的表单项
+.error-form-item(@color) {
+  box-shadow: none;
+  border: 1px solid @color;
+  border-radius: 4px;
+  color: @color;
+}
