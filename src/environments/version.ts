@@ -1,13 +1,13 @@
 // IMPORTANT: THIS FILE IS AUTO GENERATED! DO NOT MANUALLY EDIT OR CHECKIN!
 /* tslint:disable */
 export const VERSION = {
-    "dirty": true,
-    "raw": "bf1c87d-dirty",
-    "hash": "bf1c87d",
+    "dirty": false,
+    "raw": "2b480aa",
+    "hash": "2b480aa",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "bf1c87d-dirty",
+    "suffix": "2b480aa",
     "semverString": null,
     "version": "0.1.3",
     "dependencies": {
@@ -17,6 +17,7 @@ export const VERSION = {
         "@angular/core": "^6.1.0",
         "@angular/forms": "^6.1.0",
         "@angular/http": "^6.1.0",
+        "@angular/material": "^7.1.0",
         "@angular/platform-browser": "^6.1.0",
         "@angular/platform-browser-dynamic": "^6.1.0",
         "@angular/router": "^6.1.0",
