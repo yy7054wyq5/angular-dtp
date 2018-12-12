@@ -14,11 +14,24 @@ import { AComponent } from './share/a/a.component';
 import { DDirective } from './share/d.directive';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { RowDetailsComponent } from './ngx-row-detail/ngx-row-detail.component';
+import { SelectComponent } from './select/select/select.component';
+import { OptionComponent } from './select/option/option.component';
+import { OptionMultiComponent } from './select/option-multi/option-multi.component';
 
 registerLocaleData(zh);
 
 @NgModule({
-  declarations: [AppComponent, MuiItemComponent, MuiGridComponent, AComponent, DDirective, RowDetailsComponent],
+  declarations: [
+    AppComponent,
+    MuiItemComponent,
+    MuiGridComponent,
+    AComponent,
+    DDirective,
+    RowDetailsComponent,
+    SelectComponent,
+    OptionComponent,
+    OptionMultiComponent
+  ],
   imports: [BrowserModule, BrowserAnimationsModule, FormsModule, HttpClientModule, NgZorroAntdModule, NgxDatatableModule],
   entryComponents: [],
   providers: [{ provide: NZ_I18N, useValue: zh_CN }],
