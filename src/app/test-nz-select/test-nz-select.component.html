@@ -1,0 +1,8 @@
+<ul>
+  <li *ngFor="let li of lis">
+    <nz-select [nzPlaceHolder]="li.name">
+      <nz-option *ngFor="let op of li.options" [nzLabel]="op.name" [nzValue]="op.value"></nz-option>
+    </nz-select>
+  </li>
+</ul>
+<button nz-button (click)="addLi($event)">增加</button>

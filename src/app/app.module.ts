@@ -14,11 +14,12 @@ import { AComponent } from './share/a/a.component';
 import { DDirective } from './share/d.directive';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { RowDetailsComponent } from './ngx-row-detail/ngx-row-detail.component';
+import { TestNzSelectComponent } from './test-nz-select/test-nz-select.component';
 
 registerLocaleData(zh);
 
 @NgModule({
-  declarations: [AppComponent, MuiItemComponent, MuiGridComponent, AComponent, DDirective, RowDetailsComponent],
+  declarations: [AppComponent, MuiItemComponent, MuiGridComponent, AComponent, DDirective, RowDetailsComponent, TestNzSelectComponent],
   imports: [BrowserModule, BrowserAnimationsModule, FormsModule, HttpClientModule, NgZorroAntdModule, NgxDatatableModule],
   entryComponents: [],
   providers: [{ provide: NZ_I18N, useValue: zh_CN }],
