@@ -40,8 +40,7 @@
           (change)="updateValue($event, 'gender', rowIndex)"
           [value]="value"
         >
-          <option value="male">Male</option>
-          <option value="female">Female</option>
+          <option value="{{o}}" *ngFor="let o of creatOptions()">{{o}}</option>
         </select>
       </ng-template>
     </ngx-datatable-column>
