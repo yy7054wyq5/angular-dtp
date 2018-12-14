@@ -29,18 +29,18 @@
         />
       </ng-template>
     </ngx-datatable-column>
-    <ngx-datatable-column name="Gender">
+    <ngx-datatable-column name="Numbers">
       <ng-template ngx-datatable-cell-template let-rowIndex="rowIndex" let-row="row" let-value="value">
-        <span title="Double click to edit" (dblclick)="editing[rowIndex + '-gender'] = true" *ngIf="!editing[rowIndex + '-gender']">
+        <span title="Double click to edit" (dblclick)="editing[rowIndex + '-Numbers'] = true" *ngIf="!editing[rowIndex + '-Numbers']">
           {{ value }}
         </span>
         <select
-          *ngIf="editing[rowIndex + '-gender']"
-          (blur)="editing[rowIndex + '-gender'] = false"
-          (change)="updateValue($event, 'gender', rowIndex)"
+          *ngIf="editing[rowIndex + '-Numbers']"
+          (blur)="editing[rowIndex + '-Numbers'] = false"
+          (change)="updateValue($event, 'Numbers', rowIndex)"
           [value]="value"
         >
-          <option value="{{o}}" *ngFor="let o of creatOptions()">{{o}}</option>
+          <option value="{{o}}" *ngFor="let o of row.options">{{o}}</option>
         </select>
       </ng-template>
     </ngx-datatable-column>
