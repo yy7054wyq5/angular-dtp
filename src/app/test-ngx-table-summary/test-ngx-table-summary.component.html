@@ -1,0 +1,37 @@
+<div>
+  <h3>Simple Summary Row
+    <small>
+    <a href="https://github.com/swimlane/ngx-datatable/blob/master/demo/summary/summary-row-simple.component.ts">
+      Source
+    </a>
+    </small>
+  </h3>
+  <div class="controls">
+    <div>
+      <input
+        id="enable-summary"
+        type="checkbox"
+        [checked]="enableSummary"
+        (change)="enableSummary = !enableSummary">
+      <label for="enable-summary">Enable Summary Row</label>
+    </div>
+    <div>
+      <label for="position-select">Position</label>
+      <select id="position-select" (change)="summaryPosition = $event.target.value">
+        <option [value]="'top'">Top</option>
+        <option [value]="'bottom'">Bottom</option>
+      </select>
+    </div>
+  </div>
+  <ngx-datatable
+    class="material"
+    [summaryRow]="enableSummary"
+    [summaryPosition]="summaryPosition"
+    [summaryHeight]="'auto'"
+    [columns]="columns"
+    [columnMode]="'force'"
+    [headerHeight]="50"
+    [rowHeight]="'auto'"
+    [rows]="rows">
+  </ngx-datatable>
+</div>
