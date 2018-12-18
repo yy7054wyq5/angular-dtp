@@ -8,11 +8,7 @@ import { Component } from '@angular/core';
 export class TestNgxTableSummaryComponent {
   rows = [];
 
-  columns = [
-    { prop: 'name', summaryFunc: null },
-    // { name: 'Gender', summaryFunc: cells => this.summaryForGender(cells) },
-    { prop: 'age', summaryFunc: cells => this.avgAge(cells) }
-  ];
+  columns = [{ prop: 'name' }, { name: 'Gender' }, { prop: 'age' }];
 
   enableSummary = true;
   summaryPosition = 'top';
@@ -38,6 +34,10 @@ export class TestNgxTableSummaryComponent {
     console.log(a);
   }
 
+  getNames(): string[] {
+    return this.rows.map(row => row['name']).map(fullName => fullName.split(' ')[1]);
+  }
+
   private summaryForGender(cells: string[]) {
     const males = cells.filter(cell => cell === 'male').length;
     const females = cells.filter(cell => cell === 'female').length;
@@ -45,8 +45,9 @@ export class TestNgxTableSummaryComponent {
     return `males: ${males}, females: ${females}`;
   }
 
-  private avgAge(cells: number[]): number {
-    const filteredCells = cells.filter(cell => !!cell);
-    return filteredCells.reduce((sum, cell) => (sum += cell), 0) / filteredCells.length;
+  public avgAge(cells: number[]): number {
+    // const filteredCells = cells.filter(cell => !!cell);
+    // return filteredCells.reduce((sum, cell) => (sum += cell), 0) / filteredCells.length;
+    return 1;
   }
 }

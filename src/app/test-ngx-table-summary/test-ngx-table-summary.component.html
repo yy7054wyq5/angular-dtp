@@ -1,18 +1,13 @@
 <div>
-  <h3>Simple Summary Row
+  <h3>
+    Simple Summary Row
     <small>
-    <a href="https://github.com/swimlane/ngx-datatable/blob/master/demo/summary/summary-row-simple.component.ts">
-      Source
-    </a>
+      <a href="https://github.com/swimlane/ngx-datatable/blob/master/demo/summary/summary-row-simple.component.ts"> Source </a>
     </small>
   </h3>
   <div class="controls">
     <div>
-      <input
-        id="enable-summary"
-        type="checkbox"
-        [checked]="enableSummary"
-        (change)="enableSummary = !enableSummary">
+      <input id="enable-summary" type="checkbox" [checked]="enableSummary" (change)="enableSummary = !enableSummary" />
       <label for="enable-summary">Enable Summary Row</label>
     </div>
     <div>
@@ -32,6 +27,18 @@
     [columnMode]="'force'"
     [headerHeight]="50"
     [rowHeight]="'auto'"
-    [rows]="rows">
+    [rows]="rows"
+  >
+    <ngx-datatable-column prop="name" [summaryFunc]="avgAge" [summaryTemplate]="nameSummaryCell"></ngx-datatable-column>
+    <ngx-datatable-column name="Gender"></ngx-datatable-column>
+    <ngx-datatable-column prop="age" [summaryFunc]="avgAge"></ngx-datatable-column>
   </ngx-datatable>
+
+  <ng-template #nameSummaryCell>
+    <div class="name-container">
+      <div class="chip" *ngFor="let name of getNames()">
+        <span class="chip-content">{{ name }}</span>
+      </div>
+    </div>
+  </ng-template>
 </div>
