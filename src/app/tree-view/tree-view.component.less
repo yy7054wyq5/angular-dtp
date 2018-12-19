@@ -1,0 +1,45 @@
+.branch {
+  display: flex;
+  flex-direction: column;
+  .node {
+    display: flex;
+    > div {
+      flex: 1;
+      &.line {
+        display: flex;
+        flex-direction: column;
+        > div {
+          flex: 1;
+          &:first-child {
+            border-left: 1px solid #000;
+            border-bottom: 1px solid #000;
+          }
+          &:last-child {
+            border-left: 1px solid #000;
+          }
+        }
+      }
+      &.real {
+        padding: 4px;
+        padding-left: 0;
+        .content {
+          border: 1px solid #000;
+        }
+      }
+    }
+  }
+  .node:first-child {
+    .line {
+      > div:first-child {
+        border-left: 0;
+      }
+    }
+  }
+  .node:last-child {
+    .line {
+      > div:last-child {
+        border-left: 0;
+      }
+    }
+  }
+}
