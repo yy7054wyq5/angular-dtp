@@ -18,11 +18,24 @@ import { TestNzSelectComponent } from './test-nz-select/test-nz-select.component
 import { TestNgxTableComponent } from './test-ngx-table/test-ngx-table.component';
 import { TestNgxTableSummaryComponent } from './test-ngx-table-summary/test-ngx-table-summary.component';
 import { TreeViewComponent } from './tree-view/tree-view.component';
+import { TreeNodeComponent } from './tree-view/tree-node/tree-node.component';
 
 registerLocaleData(zh);
 
 @NgModule({
-  declarations: [AppComponent, MuiItemComponent, MuiGridComponent, AComponent, DDirective, RowDetailsComponent, TestNzSelectComponent, TestNgxTableComponent, TestNgxTableSummaryComponent, TreeViewComponent],
+  declarations: [
+    AppComponent,
+    MuiItemComponent,
+    MuiGridComponent,
+    AComponent,
+    DDirective,
+    RowDetailsComponent,
+    TestNzSelectComponent,
+    TestNgxTableComponent,
+    TestNgxTableSummaryComponent,
+    TreeViewComponent,
+    TreeNodeComponent
+  ],
   imports: [BrowserModule, BrowserAnimationsModule, FormsModule, HttpClientModule, NgZorroAntdModule, NgxDatatableModule],
   entryComponents: [],
   providers: [{ provide: NZ_I18N, useValue: zh_CN }],
