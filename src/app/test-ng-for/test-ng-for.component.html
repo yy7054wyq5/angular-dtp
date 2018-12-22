@@ -1,0 +1,4 @@
+<a (click)="refresh()">刷新</a>/ <a (click)="add()">添加</a>
+<ul>
+  <li (click)="remove(ii)" *ngFor="let i of arr; index as ii; trackBy: trackFunc">{{i.id}} / {{ i.name }}</li>
+</ul>
