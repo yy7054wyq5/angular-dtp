@@ -20,6 +20,7 @@ import { TestNgxTableSummaryComponent } from './test-ngx-table-summary/test-ngx-
 import { TreeViewComponent } from './tree-view/tree-view.component';
 import { TreeNodeComponent } from './tree-view/tree-node/tree-node.component';
 import { TestNgForComponent } from './test-ng-for/test-ng-for.component';
+import { CreatTemplateComponent } from './creat-template/creat-template.component';
 
 registerLocaleData(zh);
 
@@ -36,7 +37,8 @@ registerLocaleData(zh);
     TestNgxTableSummaryComponent,
     TreeViewComponent,
     TreeNodeComponent,
-    TestNgForComponent
+    TestNgForComponent,
+    CreatTemplateComponent
   ],
   imports: [BrowserModule, BrowserAnimationsModule, FormsModule, HttpClientModule, NgZorroAntdModule, NgxDatatableModule],
   entryComponents: [],
