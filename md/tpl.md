@@ -95,3 +95,8 @@
 ```javascript
   attachView();
 ```
+
+### 参考资料：
+
+* [Angular 4.x 修仙之路: Angular 2 TemplateRef & ViewContainerRef](https://segmentfault.com/a/1190000008672478)
+* [深入Angular：理解Component动态加载](https://zhuanlan.zhihu.com/p/40015871)
