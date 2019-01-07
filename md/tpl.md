@@ -14,6 +14,9 @@
 
 #### 1. 使用 [ngTemplateOutlet](https://angular.cn/api/common/NgTemplateOutlet) 和 [ngComponentOutlet](https://angular.cn/api/common/NgComponentOutlet)
 
+>* ngTemplateOutlet: 根据一个提前备好的 TemplateRef 插入一个内嵌视图。
+>* ngComponentOutlet: Instantiates a single Component type and inserts its Host View into current View. NgComponentOutlet provides a declarative approach for dynamic component creation.
+
 假设要写一个表格组件，名为wtable，需要自定义单元格内容，组件ts有如下内容，为了缩减篇幅，只保留重要代码，具体见[线上代码](https://stackblitz.com/edit/angular-creat-tpl-or-comp?file=src%2Fapp%2Fwtable%2Fwtable.component.ts)：
 
 * 使用场景
@@ -65,7 +68,15 @@
 
 #### 2. 使用[ViewContainerRef](https://angular.cn/api/core/ViewContainerRef)
 
-假设要写一个模态框组件wmodal，需要将模板或组件在模态框里展示。但是又不想html里用*ngIf来判断内容的显示，两个三个还可以接受，那要是7、8个或以上呢？程序员嘛，都想少写一点代码。好了，就让我们看看这个，具体见[线上代码](https://stackblitz.com/edit/angular-creat-tpl-or-comp?file=src%2Fapp%2Fwmodal%2Fwmodal.component.ts)。
+> 表示可以将一个或多个视图附着到组件中的容器。
+
+假设要写一个模态框组件wmodal，需要将模板或组件在模态框里展示。但是又不想html里用*ngIf来判断内容的显示，两个三个还可以接受，那要是7、8个或以上呢？让我们看看下面这个例子，具体见[线上代码](https://stackblitz.com/edit/angular-creat-tpl-or-comp?file=src%2Fapp%2Fwmodal%2Fwmodal.component.ts)。
+
+* 使用场景
+
+```html
+<wmodal [content]="comp" [compParams]="{data: '我是调用wmodal传入的值'}" (compOut)="wmodalOut($event)"></wmodal>
+```
 
 * 在wmodal内需要做点什么呢？首先是html
 
@@ -77,19 +88,33 @@
 * 接着是wmodal的ts
 
 ```javascript
-  // { read: ViewContainerRef } 是必须的
-  @ViewChild('container', { read: ViewContainerRef })
-  container: ViewContainerRef;
-
-  @Input() content: 
-
-  ngAfterContentInit() {
-    // 创建模板
-  createEmbeddedView();
-  // 创建组件
-  createComponent();
+ngAfterContentInit() {
+  // 依然是判断content类型
+  if (this.content instanceof Type) {
+    const comp = this.container.createComponent(this._compFac.resolveComponentFactory(this.content));
+    // 将组件所需参数合并到组件实例中
+    if (this.compParams) {
+      Object.assign(comp.instance, this.compParams);
+    }
+    // 订阅组件
+    for (const prop in comp.instance) {
+      if (comp.instance.hasOwnProperty(prop)) {
+        const subject = comp.instance[prop];
+        // 筛选组件output事件
+        if (subject instanceof EventEmitter) {
+          this._compSubs.push(
+            // 订阅组件output事件
+            subject.subscribe(data => {
+              this.compOut.emit(data);
+            })
+          );
+        }
+      }
+    }
+  } else {
+    // this.container.createEmbeddedView(content);
   }
-  
+}
 ```
 
 #### 3. 使用[ApplicationRef](https://angular.cn/api/core/ApplicationRef)

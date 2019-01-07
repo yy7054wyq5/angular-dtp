@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'scm-test',
@@ -6,10 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./test.component.less']
 })
 export class TestComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
+  @Input() data: any;
+  @Output() oclick = new EventEmitter<any>();
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  outClick() {
+    this.oclick.emit({
+      data: this.data,
+      other: 1
+    });
   }
-
 }
