@@ -10,12 +10,9 @@
 
 <hr>
 
-### 以下几点皆为个人浅显的理解
-
 #### 1. 使用 [ngTemplateOutlet](https://angular.cn/api/common/NgTemplateOutlet) 和 [ngComponentOutlet](https://angular.cn/api/common/NgComponentOutlet)
 
->* ngTemplateOutlet: 根据一个提前备好的 TemplateRef 插入一个内嵌视图。
->* ngComponentOutlet: Instantiates a single Component type and inserts its Host View into current View. NgComponentOutlet provides a declarative approach for dynamic component creation.
+>ngTemplateOutlet: 根据一个提前备好的 TemplateRef 插入一个内嵌视图。ngComponentOutlet: Instantiates a single Component type and inserts its Host View into current View. NgComponentOutlet provides a declarative approach for dynamic component creation.
 
 假设要写一个表格组件，名为wtable，需要自定义单元格内容，组件ts有如下内容，为了缩减篇幅，只保留重要代码，具体见[线上代码](https://stackblitz.com/edit/angular-creat-tpl-or-comp?file=src%2Fapp%2Fwtable%2Fwtable.component.ts)：
 
@@ -112,16 +109,30 @@ ngAfterContentInit() {
       }
     }
   } else {
-    // this.container.createEmbeddedView(content);
+    // 创建模板就比较简单了
+    // 留意一下第二个参数，若是需要将组建的某些数据传出则可以这样
+    const _data = {a: 1, b: 2};
+    this.container.createEmbeddedView(this.content, {$implicit: _data, other: 2});
   }
 }
 ```
 
 #### 3. 使用[ApplicationRef](https://angular.cn/api/core/ApplicationRef)
 
+> A reference to an Angular application running on a page.
+
 ```javascript
   attachView();
 ```
+
+### 结束语
+
+本文并未对3种方式进行对比，只是个人对于3种方式的使用理解。
+简单的总结一下：
+
+* 使用1，会让html代码比较多，不易维护；而且1是通过2来实现得；
+* 1、2都需要确定插座位置，3不需要确定插座位置；
+* 2是比较常见的使用方式
 
 ### 参考资料：
 
