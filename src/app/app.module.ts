@@ -21,6 +21,8 @@ import { TreeViewComponent } from './tree-view/tree-view.component';
 import { TreeNodeComponent } from './tree-view/tree-node/tree-node.component';
 import { TestNgForComponent } from './test-ng-for/test-ng-for.component';
 import { CreatTemplateComponent } from './creat-template/creat-template.component';
+import { WmodalComponent } from './wmodal/wmodal.component';
+import { TestComponent } from './test/test.component';
 
 registerLocaleData(zh);
 
@@ -38,7 +40,9 @@ registerLocaleData(zh);
     TreeViewComponent,
     TreeNodeComponent,
     TestNgForComponent,
-    CreatTemplateComponent
+    CreatTemplateComponent,
+    WmodalComponent,
+    TestComponent
   ],
   imports: [BrowserModule, BrowserAnimationsModule, FormsModule, HttpClientModule, NgZorroAntdModule, NgxDatatableModule],
   entryComponents: [],
