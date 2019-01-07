@@ -1,8 +1,6 @@
-### 写在最前，本文提到的“模板”都是
+### *写在最前，本文提到的“模板”都是ng-template；假设的模态组件也只是实现模态内容；为了缩减文章的篇幅，只保留了重要的部分。完整的例子在[线上](https://stackblitz.com/edit/angular-creat-tpl-or-comp)。*
 
-```html
-<ng-template></ng-template>
-```
+<hr>
 
 ### 在开发过程中，难免会遇到公共组件需要Input模板或input组件的时候，以增加公共组件交互或展示的灵活性。
 
@@ -72,7 +70,15 @@
 * 使用场景
 
 ```html
+<!-- 组件 -->
 <wmodal [content]="comp" [compParams]="{data: '我是调用wmodal传入的值'}" (compOut)="wmodalOut($event)"></wmodal>
+
+<!-- 模板 -->
+<wmodal [content]="modalTpl"></wmodal>
+<ng-template #modalTpl let-data let-other="other">
+  data: {{data | json}} <br>
+  other: {{other}}
+</ng-template>
 ```
 
 * 在wmodal内需要做点什么呢？首先是html
@@ -121,8 +127,36 @@ ngAfterContentInit() {
 
 > A reference to an Angular application running on a page.
 
+假设还是
+
+* 使用场景
+
+```html
+<wmodal2 [content]="comp" [compParams]="{data: '我是调用wmodal2传入的值'}" (compOut)="wmodalOut($event)"></wmodal2>
+```
+
+* 惯例，wmodal2 html
+
+```html
+ <!-- 什么都没有 -->
+```
+
+* wmodal2 ts
+
 ```javascript
-  attachView();
+ngAfterContentInit() {
+  const comp = this._compFaRes.resolveComponentFactory(this.content).create(this._injector);
+  this._e.nativeElement.appendChild(comp.location.nativeElement);
+
+  // 此处与第2点一样，订阅output和给input赋值
+
+  // 去掉timeout你就知道为什么了
+  // 具体原因可以看我专栏的的第一篇文章
+  const timeId = setTimeout(() => {
+    this._appref.attachView(comp.hostView);
+    clearTimeout(timeId);
+  }, 100)
+}
 ```
 
 ### 结束语
@@ -131,11 +165,14 @@ ngAfterContentInit() {
 简单的总结一下：
 
 * 使用1，会让html代码比较多，不易维护；而且1是通过2来实现得，[传送门](https://github.com/angular/angular/tree/master/packages/common/src/directives)；
-* 1、2都需要确定插座位置，3不需要确定插座位置；
+* 1、2都需要插座代码(可见的outlet)，3不需要插座代码；
 * 2是比较常见的使用方式
+* 使用3的方式来仅可以创建组件且还有更大的用处
+
+有兴趣的还可以看看angular源码，其中[ngFor](https://github.com/angular/angular/blob/master/packages/common/src/directives/ng_for_of.ts)和[ngIf](https://github.com/angular/angular/blob/master/packages/common/src/directives/ng_if.ts)皆是由第2种方式来实现得。
 
 ### 参考资料：
 
 * [angular.cn](https://angular.cn/)
-* [Angular 4.x 修仙之路: Angular 2 TemplateRef & ViewContainerRef](https://segmentfault.com/a/1190000008672478)
 * [深入Angular：理解Component动态加载](https://zhuanlan.zhihu.com/p/40015871)
+* [Angular 4.x 修仙之路: Angular 2 TemplateRef & ViewContainerRef](https://segmentfault.com/a/1190000008672478)
