@@ -23,6 +23,7 @@ import { TestNgForComponent } from './test-ng-for/test-ng-for.component';
 import { CreatTemplateComponent } from './creat-template/creat-template.component';
 import { WmodalComponent } from './wmodal/wmodal.component';
 import { TestComponent } from './test/test.component';
+import { Wmodal2Component } from './wmodal2/wmodal2.component';
 
 registerLocaleData(zh);
 
@@ -42,7 +43,8 @@ registerLocaleData(zh);
     TestNgForComponent,
     CreatTemplateComponent,
     WmodalComponent,
-    TestComponent
+    TestComponent,
+    Wmodal2Component
   ],
   imports: [BrowserModule, BrowserAnimationsModule, FormsModule, HttpClientModule, NgZorroAntdModule, NgxDatatableModule],
   entryComponents: [],

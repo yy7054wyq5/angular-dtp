@@ -56,7 +56,10 @@ export class WmodalComponent implements OnInit, AfterContentInit, OnDestroy {
         }
       }
     } else {
-      // this.container.createEmbeddedView(content);
+      // 创建模板就比较简单了
+      // 留意一下第二个参数，若是需要将组建的某些数据传出则可以这样
+      const _data = {a: 1, b: 2};
+      this.container.createEmbeddedView(this.content, {$implicit: _data, other: 2});
     }
   }
 

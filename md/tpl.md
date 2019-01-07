@@ -130,7 +130,7 @@ ngAfterContentInit() {
 本文并未对3种方式进行对比，只是个人对于3种方式的使用理解。
 简单的总结一下：
 
-* 使用1，会让html代码比较多，不易维护；而且1是通过2来实现得；
+* 使用1，会让html代码比较多，不易维护；而且1是通过2来实现得，[传送门](https://github.com/angular/angular/tree/master/packages/common/src/directives)；
 * 1、2都需要确定插座位置，3不需要确定插座位置；
 * 2是比较常见的使用方式
 
