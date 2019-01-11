@@ -17,7 +17,7 @@ import { Subscription } from 'rxjs';
 @Component({
   selector: 'wmodal',
   templateUrl: './wmodal.component.html',
-  styleUrls: ['./wmodal.component.css']
+  styleUrls: ['./wmodal.component.less']
 })
 export class WmodalComponent implements OnInit, AfterContentInit, OnDestroy {
   constructor(private _compFac: ComponentFactoryResolver) {}

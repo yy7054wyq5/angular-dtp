@@ -45,6 +45,10 @@ export class AppComponent implements OnInit {
   expanded: any = {};
   timeout: any;
 
+  onPushData = {
+    input: null
+  };
+
   constructor() {
     this.fetch((data: any[]) => {
       this.rows = data.splice(1, 20);
@@ -52,6 +56,8 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.onPushData.input = 1;
+
     const clicks = of(1, 2, 3, 4);
     const result = clicks.pipe(mergeMapTo(of(5555)));
     result.subscribe(x => console.log(x));
@@ -67,6 +73,10 @@ export class AppComponent implements OnInit {
       .subscribe(x => {
         console.log(x);
       });
+  }
+
+  changeInput(n) {
+    this.onPushData.input = n;
   }
 
   onPage(event) {

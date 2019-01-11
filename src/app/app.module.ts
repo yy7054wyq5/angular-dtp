@@ -24,6 +24,7 @@ import { CreatTemplateComponent } from './creat-template/creat-template.componen
 import { WmodalComponent } from './wmodal/wmodal.component';
 import { TestComponent } from './test/test.component';
 import { Wmodal2Component } from './wmodal2/wmodal2.component';
+import { OnPushComponent } from './on-push/on-push.component';
 
 registerLocaleData(zh);
 
@@ -44,7 +45,8 @@ registerLocaleData(zh);
     CreatTemplateComponent,
     WmodalComponent,
     TestComponent,
-    Wmodal2Component
+    Wmodal2Component,
+    OnPushComponent
   ],
   imports: [BrowserModule, BrowserAnimationsModule, FormsModule, HttpClientModule, NgZorroAntdModule, NgxDatatableModule],
   entryComponents: [],
