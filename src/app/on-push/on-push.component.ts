@@ -12,7 +12,6 @@ export class OnPushComponent implements OnInit, OnChanges {
   }
 
   protected insertData;
-
   @Input() data;
 
   // @Input() set data(data) {
