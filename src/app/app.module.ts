@@ -25,8 +25,26 @@ import { WmodalComponent } from './wmodal/wmodal.component';
 import { TestComponent } from './test/test.component';
 import { Wmodal2Component } from './wmodal2/wmodal2.component';
 import { OnPushComponent } from './on-push/on-push.component';
+import { Routes, RouterModule } from '@angular/router';
+import { HomeComponent } from './home/home.component';
 
 registerLocaleData(zh);
+
+const routes: Routes = [
+  {
+    path: 'test/:id/:token',
+    component: TestComponent
+  },
+  {
+    path: 'home',
+    component: HomeComponent
+  },
+  {
+    path: '**',
+    pathMatch: 'full',
+    redirectTo: '/home'
+  }
+];
 
 @NgModule({
   declarations: [
@@ -46,9 +64,20 @@ registerLocaleData(zh);
     WmodalComponent,
     TestComponent,
     Wmodal2Component,
-    OnPushComponent
+    OnPushComponent,
+    HomeComponent
   ],
-  imports: [BrowserModule, BrowserAnimationsModule, FormsModule, HttpClientModule, NgZorroAntdModule, NgxDatatableModule],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    HttpClientModule,
+    NgZorroAntdModule,
+    NgxDatatableModule,
+    RouterModule.forRoot(routes, {
+      useHash: true
+    })
+  ],
   entryComponents: [],
   providers: [{ provide: NZ_I18N, useValue: zh_CN }],
   bootstrap: [AppComponent]
