@@ -1,0 +1,14 @@
+<toggle #c>
+  <ng-template let-on="on" let-fns="fns">
+    <nz-switch [ngModel]="on" (click)="fns.toggle()"></nz-switch>
+    {{ UI_console(c) }}
+    <hr />
+    <button toggler [on]="on" (click)="fns.toggle()">
+      {{ on ? 'on' : 'off' }}
+    </button>
+  </ng-template>
+</toggle>
+
+<ng-template #aaa>
+  111
+</ng-template>

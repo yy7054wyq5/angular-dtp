@@ -27,6 +27,8 @@ import { Wmodal2Component } from './wmodal2/wmodal2.component';
 import { OnPushComponent } from './on-push/on-push.component';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { IndexComponent } from './custom-extends-comp/index/index.component';
+import { CustomExtendsCompModule } from './custom-extends-comp/custom-extends-comp.module';
 
 registerLocaleData(zh);
 
@@ -40,9 +42,13 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
+    path: 'custom-extends-comp',
+    component: IndexComponent
+  },
+  {
     path: '**',
     pathMatch: 'full',
-    redirectTo: '/home'
+    redirectTo: '/custom-extends-comp'
   }
 ];
 
@@ -74,6 +80,7 @@ const routes: Routes = [
     HttpClientModule,
     NgZorroAntdModule,
     NgxDatatableModule,
+    CustomExtendsCompModule,
     RouterModule.forRoot(routes, {
       useHash: true
     })
