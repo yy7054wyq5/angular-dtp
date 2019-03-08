@@ -12,7 +12,7 @@ import { MuiItemComponent } from './mui-item/mui-item.component';
 import { MuiGridComponent } from './mui-grid/mui-grid.component';
 import { AComponent } from './share/a/a.component';
 import { DDirective } from './share/d.directive';
-import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+import { NgxDatatableModule } from 'ngx-datatable-wy';
 import { RowDetailsComponent } from './ngx-row-detail/ngx-row-detail.component';
 import { TestNzSelectComponent } from './test-nz-select/test-nz-select.component';
 import { TestNgxTableComponent } from './test-ngx-table/test-ngx-table.component';
@@ -29,6 +29,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { IndexComponent } from './custom-extends-comp/index/index.component';
 import { CustomExtendsCompModule } from './custom-extends-comp/custom-extends-comp.module';
+import { ExtendsZorroUploadComponent } from './extends-zorro-upload/extends-zorro-upload.component';
+import { UploadDemoComponent } from './extends-zorro-upload/upload-demo/upload-demo.component';
 
 registerLocaleData(zh);
 
@@ -44,6 +46,10 @@ const routes: Routes = [
   {
     path: 'custom-extends-comp',
     component: IndexComponent
+  },
+  {
+    path: 'extends-upload-comp',
+    component: UploadDemoComponent
   },
   {
     path: '**',
@@ -71,7 +77,9 @@ const routes: Routes = [
     TestComponent,
     Wmodal2Component,
     OnPushComponent,
-    HomeComponent
+    HomeComponent,
+    ExtendsZorroUploadComponent,
+    UploadDemoComponent
   ],
   imports: [
     BrowserModule,
