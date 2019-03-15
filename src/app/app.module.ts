@@ -31,6 +31,8 @@ import { IndexComponent } from './custom-extends-comp/index/index.component';
 import { CustomExtendsCompModule } from './custom-extends-comp/custom-extends-comp.module';
 import { ExtendsZorroUploadComponent } from './extends-zorro-upload/extends-zorro-upload.component';
 import { UploadDemoComponent } from './extends-zorro-upload/upload-demo/upload-demo.component';
+import { StoreModule } from '@ngrx/store';
+import { reducers, metaReducers } from './reducers';
 
 registerLocaleData(zh);
 
@@ -91,7 +93,8 @@ const routes: Routes = [
     CustomExtendsCompModule,
     RouterModule.forRoot(routes, {
       useHash: true
-    })
+    }),
+    StoreModule.forRoot(reducers, { metaReducers })
   ],
   entryComponents: [],
   providers: [{ provide: NZ_I18N, useValue: zh_CN }],
