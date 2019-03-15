@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [0.1.0](https://github.com/yy7054wyq5/angular-dtp/compare/v0.0.1...v0.1.0) (2019-03-15)
+
+
+### Features
+
+* nothing ([3defb9f](https://github.com/yy7054wyq5/angular-dtp/commit/3defb9f))
+* tpl ([8ba039d](https://github.com/yy7054wyq5/angular-dtp/commit/8ba039d))
+* 升级到7.0 ([f1d8437](https://github.com/yy7054wyq5/angular-dtp/commit/f1d8437))
+* 扩展nz-upload ([c6cd4bb](https://github.com/yy7054wyq5/angular-dtp/commit/c6cd4bb))
+* 服务文档 ([ffc1146](https://github.com/yy7054wyq5/angular-dtp/commit/ffc1146))
+
+
+
 <a name="0.0.1"></a>
 ## [0.0.1](https://github.com/yy7054wyq5/angular-dtp/compare/9a541ea...v0.0.1) (2019-01-04)
 
