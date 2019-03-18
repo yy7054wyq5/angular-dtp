@@ -33,6 +33,8 @@ import { ExtendsZorroUploadComponent } from './extends-zorro-upload/extends-zorr
 import { UploadDemoComponent } from './extends-zorro-upload/upload-demo/upload-demo.component';
 import { StoreModule } from '@ngrx/store';
 import { reducers, metaReducers } from './reducers';
+import { BehaviorSubjectsService } from './services/behavior-subjects.service';
+import { CounterComponent } from './components/counter/counter.component';
 
 registerLocaleData(zh);
 
@@ -81,7 +83,8 @@ const routes: Routes = [
     OnPushComponent,
     HomeComponent,
     ExtendsZorroUploadComponent,
-    UploadDemoComponent
+    UploadDemoComponent,
+    CounterComponent
   ],
   imports: [
     BrowserModule,
@@ -97,7 +100,7 @@ const routes: Routes = [
     StoreModule.forRoot(reducers, { metaReducers })
   ],
   entryComponents: [],
-  providers: [{ provide: NZ_I18N, useValue: zh_CN }],
+  providers: [{ provide: NZ_I18N, useValue: zh_CN }, BehaviorSubjectsService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
