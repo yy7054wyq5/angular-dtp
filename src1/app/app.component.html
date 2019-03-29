@@ -1,0 +1,8 @@
+<section>
+	根组件:
+	<hello></hello>
+	{{ config.data | json }}
+</section>
+<router-outlet></router-outlet>
+<button [routerLink]="'/lazy'">去懒加载模块</button>&nbsp; <button [routerLink]="'/eagerly'">去急性加载模块</button>&nbsp;
+<button [routerLink]="''">去首页</button>
