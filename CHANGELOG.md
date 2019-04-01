@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.5](https://github.com/yy7054wyq5/angular-dtp/compare/v0.1.4...v1.1.5) (2019-04-01)
+
+
+### Features
+
+* .. ([23caa7b](https://github.com/yy7054wyq5/angular-dtp/commit/23caa7b))
+* behavior-subjects ([61425b6](https://github.com/yy7054wyq5/angular-dtp/commit/61425b6))
+* cdk drag ([3ef6a49](https://github.com/yy7054wyq5/angular-dtp/commit/3ef6a49))
+* drag cdk ([c73d72f](https://github.com/yy7054wyq5/angular-dtp/commit/c73d72f))
+* service 文章样例 ([64ae623](https://github.com/yy7054wyq5/angular-dtp/commit/64ae623))
+
+
+
 ## [0.1.4](https://github.com/yy7054wyq5/angular-dtp/compare/v0.1.3...v0.1.4) (2019-03-15)
 
 
