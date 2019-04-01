@@ -1,8 +1,8 @@
 <section class="drag">
 	<ul class="drag-container" cdkDropList (cdkDropListDropped)="UI_drop($event)">
-		<li *ngFor="let item of data" cdkDrag>{{ item }}</li>
+		<li *ngFor="let item of data" cdkDrag [ngStyle]="{ width: item.width, height: item.height }">{{ item.name }}</li>
 	</ul>
 	<ul class="drag-container" cdkDropList>
-		<li *ngFor="let item of data1" cdkDrag>{{ item }}</li>
+		<li *ngFor="let item of data1" cdkDrag>{{ item.name }}</li>
 	</ul>
 </section>
