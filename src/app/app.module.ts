@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
@@ -35,6 +34,8 @@ import { StoreModule } from '@ngrx/store';
 import { reducers, metaReducers } from './reducers';
 import { BehaviorSubjectsService } from './services/behavior-subjects.service';
 import { CounterComponent } from './components/counter/counter.component';
+import { CdkIndexComponent } from './cdk-demo/cdk-index/cdk-index.component';
+import {  DragDropModule } from '@angular/cdk/drag-drop';
 
 registerLocaleData(zh);
 
@@ -54,6 +55,10 @@ const routes: Routes = [
   {
     path: 'extends-upload-comp',
     component: UploadDemoComponent
+  },
+  {
+    path: 'cdk',
+    component: CdkIndexComponent
   },
   {
     path: '**',
@@ -84,9 +89,12 @@ const routes: Routes = [
     HomeComponent,
     ExtendsZorroUploadComponent,
     UploadDemoComponent,
-    CounterComponent
+    CounterComponent,
+    IndexComponent,
+    CdkIndexComponent
   ],
   imports: [
+    DragDropModule,
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
