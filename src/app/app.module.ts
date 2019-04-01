@@ -90,7 +90,6 @@ const routes: Routes = [
     ExtendsZorroUploadComponent,
     UploadDemoComponent,
     CounterComponent,
-    IndexComponent,
     CdkIndexComponent
   ],
   imports: [

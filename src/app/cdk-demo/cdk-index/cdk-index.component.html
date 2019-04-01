@@ -1,3 +1,8 @@
-<p>
-  cdk-index works!
-</p>
+<section class="drag">
+	<ul class="drag-container" cdkDropList (cdkDropListDropped)="UI_drop($event)">
+		<li *ngFor="let item of data" cdkDrag>{{ item }}</li>
+	</ul>
+	<ul class="drag-container" cdkDropList>
+		<li *ngFor="let item of data1" cdkDrag>{{ item }}</li>
+	</ul>
+</section>
