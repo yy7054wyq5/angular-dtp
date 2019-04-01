@@ -1,11 +1,11 @@
 {
   "name": "scm-auto-client",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
     "start": "ng serve --port 4111",
-    "release": "standard-version",
+    "release": "npm start && standard-version",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
