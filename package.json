@@ -51,6 +51,7 @@
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~8.9.4",
+    "@types/quill": "^2.0.2",
     "browser-sync": "^2.23.6",
     "git-describe": "^4.0.3",
     "gulp": "^3.9.1",

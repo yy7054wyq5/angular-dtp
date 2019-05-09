@@ -1,8 +1,9 @@
 import { Component, OnInit, AfterContentInit } from '@angular/core';
 import { LazyLoadingLibService } from '../../services/lazy-loading-lib.service';
 import { forkJoin, combineLatest, zip } from 'rxjs';
+import Quill from 'quill';
 
-declare const Quill: any;
+// declare const Quill: Quill;
 
 @Component({
   selector: 'scm-extends-add-comment',
