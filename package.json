@@ -34,7 +34,7 @@
     "js-cookie": "^2.2.0",
     "lodash": "^4.17.10",
     "muuri": "^0.7.1",
-    "ng-zorro-antd": "^7.0.0",
+    "ng-zorro-antd": "^7.3.3",
     "ng2-dragula": "^2.1.0",
     "ngx-datatable-wy": "^15.0.0",
     "rxjs": "~6.4.0",

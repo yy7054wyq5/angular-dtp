@@ -45,6 +45,7 @@ import {
   ActivatedRouteSnapshot,
   DetachedRouteHandle
 } from '@angular/router';
+import { ExtendsAddCommentComponent } from './components/extends-add-comment/extends-add-comment.component';
 
 export class AppRoutingCache implements RouteReuseStrategy {
   public static handlers: { [key: string]: DetachedRouteHandle } = {};
@@ -139,7 +140,8 @@ const routes: Routes = [
     ExtendsZorroUploadComponent,
     UploadDemoComponent,
     CounterComponent,
-    CdkIndexComponent
+    CdkIndexComponent,
+    ExtendsAddCommentComponent
   ],
   imports: [
     DragDropModule,
