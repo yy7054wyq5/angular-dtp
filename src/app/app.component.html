@@ -25,5 +25,19 @@
 <button type="button" [routerLink]="['/extends-upload-comp']">go extends-upload-comp</button>
 <button type="button" [routerLink]="['/cdk']">go cdk demo</button>
 
-
-<scm-extends-add-comment></scm-extends-add-comment>
+<section class="mui" cdkDragList>
+	<div
+		cdkDragBoundary=".mui"
+		cdkDrag
+		*ngFor="let item of moveData"
+		[ngStyle]="{ width: item.width, height: item.height }"
+		(cdkDragStarted)="start($event)"
+		(cdkDragMoved)="move($event)"
+		(cdkDragReleased)="release($event)"
+		(cdkDragEnded)="end($event)"
+		(cdkDragDropped)="drop($event)"
+		(cdkDragEntered)="enter($event)"
+		(cdkDragExited)="exit($event)"
+	></div>
+	<ng-template #cdkDragPlaceholder></ng-template>
+</section>

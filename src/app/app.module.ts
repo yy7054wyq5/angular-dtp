@@ -45,6 +45,7 @@ import {
   ActivatedRouteSnapshot,
   DetachedRouteHandle
 } from '@angular/router';
+import { MuiModule } from './components/mui/mui.module';
 
 export class AppRoutingCache implements RouteReuseStrategy {
   public static handlers: { [key: string]: DetachedRouteHandle } = {};
@@ -143,6 +144,7 @@ const routes: Routes = [
   ],
   imports: [
     DragDropModule,
+    MuiModule,
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
