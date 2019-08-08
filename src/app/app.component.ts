@@ -21,6 +21,75 @@ import { mergeMapTo, mergeMap, map } from 'rxjs/operators';
 const width = [1, 2, 3, 4, 5];
 const height = [1, 2, 1, 2, 1]
 
+
+function f() {
+  console.log("f(): evaluated");
+  return function (target, propertyKey: string, descriptor: PropertyDescriptor) {
+    console.log("f(): called", propertyKey);
+  }
+}
+
+function g() {
+  console.log("g(): evaluated");
+  return function (target, propertyKey: string, descriptor: PropertyDescriptor) {
+    console.log("g(): called", propertyKey);
+  }
+}
+
+class C {
+  @f()
+  @g()
+  method() { }
+}
+
+// 类装饰器
+// @Frozen
+// class IceCream { }
+
+// function Frozen(constructor: Function) {
+//   Object.freeze(constructor);
+//   Object.freeze(constructor.prototype);
+// }
+
+// console.log(Object.isFrozen(IceCream)); // true
+
+// class FroYo extends IceCream { } // 报错，类不能被扩展
+
+
+// 属性装饰器
+export class IceCreamComponent {
+  @Emoji()
+  flavor = 'vanilla';
+}
+
+// Property Decorator
+function Emoji() {
+  return function (target: Object, key: string | symbol) {
+
+    let val = target[key];
+
+    const getter = () => {
+      return val;
+    };
+    const setter = (next) => {
+      console.log('updating flavor...');
+      val = `🍦 ${next} 🍦`;
+    };
+
+    Object.defineProperty(target, key, {
+      get: getter,
+      set: setter,
+      enumerable: true,
+      configurable: true,
+    });
+
+  };
+}
+
+const iceCream = new IceCreamComponent;
+// iceCream.flavor = '1212';
+console.log(iceCream.flavor);
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -146,4 +215,5 @@ export class AppComponent implements OnInit {
   exit(data) {
     console.log('exit', data);
   }
+
 }

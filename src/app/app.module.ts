@@ -46,6 +46,7 @@ import {
   DetachedRouteHandle
 } from '@angular/router';
 import { MuiModule } from './components/mui/mui.module';
+import { TimeRangePickerComponent } from './time-range-picker/time-range-picker.component';
 
 export class AppRoutingCache implements RouteReuseStrategy {
   public static handlers: { [key: string]: DetachedRouteHandle } = {};
@@ -141,6 +142,7 @@ const routes: Routes = [
     UploadDemoComponent,
     CounterComponent,
     CdkIndexComponent,
+    TimeRangePickerComponent,
   ],
   imports: [
     DragDropModule,
