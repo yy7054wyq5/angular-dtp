@@ -40,127 +40,119 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 registerLocaleData(zh);
 
 // 路由缓存策略，未实装
-import {
-  DefaultUrlSerializer,
-  ActivatedRouteSnapshot,
-  DetachedRouteHandle
-} from '@angular/router';
+import { DefaultUrlSerializer, ActivatedRouteSnapshot, DetachedRouteHandle } from '@angular/router';
 import { MuiModule } from './components/mui/mui.module';
 import { TimeRangePickerComponent } from './time-range-picker/time-range-picker.component';
+import { Entry1Component } from './entry1/entry1.component';
+import { Entry2Component } from './entry2/entry2.component';
 
 export class AppRoutingCache implements RouteReuseStrategy {
-  public static handlers: { [key: string]: DetachedRouteHandle } = {};
+	public static handlers: { [key: string]: DetachedRouteHandle } = {};
 
-  // 判斷路由是否能重複使用
-  public shouldDetach(route: ActivatedRouteSnapshot): boolean {
-    // 默認所有的路由設定都可以重複使用
-    // 可透過 route.data 的方式來設定重複使用的規則
-    return true;
-  }
+	// 判斷路由是否能重複使用
+	public shouldDetach(route: ActivatedRouteSnapshot): boolean {
+		// 默認所有的路由設定都可以重複使用
+		// 可透過 route.data 的方式來設定重複使用的規則
+		return true;
+	}
 
-  // 當路由離開時，會觸發此方法
-  public store(
-    route: ActivatedRouteSnapshot,
-    handle: DetachedRouteHandle
-  ): void {
-    // 將目前路由內容暫存起來
-    AppRoutingCache.handlers[route.routeConfig.path] = handle;
-  }
+	// 當路由離開時，會觸發此方法
+	public store(route: ActivatedRouteSnapshot, handle: DetachedRouteHandle): void {
+		// 將目前路由內容暫存起來
+		AppRoutingCache.handlers[route.routeConfig.path] = handle;
+	}
 
-  // 當路由進入時，可判斷是否還原路由的暫存內容
-  public shouldAttach(route: ActivatedRouteSnapshot): boolean {
-    return (
-      !!route.routeConfig && !!AppRoutingCache.handlers[route.routeConfig.path]
-    );
-  }
-  // 從 Cache 中取得對應的暫存內容
-  public retrieve(route: ActivatedRouteSnapshot): DetachedRouteHandle {
-    if (!route.routeConfig) {
-      return null;
-    }
-    return AppRoutingCache.handlers[route.routeConfig.path];
-  }
+	// 當路由進入時，可判斷是否還原路由的暫存內容
+	public shouldAttach(route: ActivatedRouteSnapshot): boolean {
+		return !!route.routeConfig && !!AppRoutingCache.handlers[route.routeConfig.path];
+	}
+	// 從 Cache 中取得對應的暫存內容
+	public retrieve(route: ActivatedRouteSnapshot): DetachedRouteHandle {
+		if (!route.routeConfig) {
+			return null;
+		}
+		return AppRoutingCache.handlers[route.routeConfig.path];
+	}
 
-  // 判斷是否同一路由
-  public shouldReuseRoute(
-    future: ActivatedRouteSnapshot,
-    current: ActivatedRouteSnapshot
-  ): boolean {
-    return future.routeConfig === current.routeConfig;
-  }
+	// 判斷是否同一路由
+	public shouldReuseRoute(future: ActivatedRouteSnapshot, current: ActivatedRouteSnapshot): boolean {
+		return future.routeConfig === current.routeConfig;
+	}
 }
 
 const routes: Routes = [
-  {
-    path: 'test/:id/:token',
-    component: TestComponent
-  },
-  {
-    path: 'home',
-    component: HomeComponent
-  },
-  {
-    path: 'custom-extends-comp',
-    component: IndexComponent
-  },
-  {
-    path: 'extends-upload-comp',
-    component: UploadDemoComponent
-  },
-  {
-    path: 'cdk',
-    component: CdkIndexComponent
-  },
-  {
-    path: '**',
-    pathMatch: 'full',
-    redirectTo: '/custom-extends-comp'
-  }
+	{
+		path: 'test/:id/:token',
+		component: TestComponent,
+	},
+	{
+		path: 'home',
+		component: HomeComponent,
+	},
+	{
+		path: 'custom-extends-comp',
+		component: IndexComponent,
+	},
+	{
+		path: 'extends-upload-comp',
+		component: UploadDemoComponent,
+	},
+	{
+		path: 'cdk',
+		component: CdkIndexComponent,
+	},
+	{
+		path: '**',
+		pathMatch: 'full',
+		redirectTo: '/custom-extends-comp',
+	},
 ];
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    MuiItemComponent,
-    MuiGridComponent,
-    AComponent,
-    DDirective,
-    RowDetailsComponent,
-    TestNzSelectComponent,
-    TestNgxTableComponent,
-    TestNgxTableSummaryComponent,
-    TreeViewComponent,
-    TreeNodeComponent,
-    TestNgForComponent,
-    CreatTemplateComponent,
-    WmodalComponent,
-    TestComponent,
-    Wmodal2Component,
-    OnPushComponent,
-    HomeComponent,
-    ExtendsZorroUploadComponent,
-    UploadDemoComponent,
-    CounterComponent,
-    CdkIndexComponent,
-    TimeRangePickerComponent,
-  ],
-  imports: [
-    DragDropModule,
-    MuiModule,
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-    HttpClientModule,
-    NgZorroAntdModule,
-    NgxDatatableModule,
-    CustomExtendsCompModule,
-    RouterModule.forRoot(routes, {
-      useHash: true
-    }),
-    StoreModule.forRoot(reducers, { metaReducers })
-  ],
-  entryComponents: [],
-  providers: [{ provide: NZ_I18N, useValue: zh_CN }, BehaviorSubjectsService],
-  bootstrap: [AppComponent]
+	declarations: [
+		AppComponent,
+		MuiItemComponent,
+		MuiGridComponent,
+		AComponent,
+		DDirective,
+		RowDetailsComponent,
+		TestNzSelectComponent,
+		TestNgxTableComponent,
+		TestNgxTableSummaryComponent,
+		TreeViewComponent,
+		TreeNodeComponent,
+		TestNgForComponent,
+		CreatTemplateComponent,
+		WmodalComponent,
+		TestComponent,
+		Wmodal2Component,
+		OnPushComponent,
+		HomeComponent,
+		ExtendsZorroUploadComponent,
+		UploadDemoComponent,
+		CounterComponent,
+		CdkIndexComponent,
+		TimeRangePickerComponent,
+		Entry1Component,
+		Entry2Component,
+	],
+	imports: [
+		DragDropModule,
+		MuiModule,
+		BrowserModule,
+		BrowserAnimationsModule,
+		FormsModule,
+		HttpClientModule,
+		NgZorroAntdModule,
+		NgxDatatableModule,
+		CustomExtendsCompModule,
+		RouterModule.forRoot(routes, {
+			useHash: true,
+		}),
+		StoreModule.forRoot(reducers, { metaReducers }),
+	],
+	entryComponents: [Entry1Component, Entry2Component],
+	providers: [{ provide: NZ_I18N, useValue: zh_CN }, BehaviorSubjectsService],
+	bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

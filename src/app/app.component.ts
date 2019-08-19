@@ -11,11 +11,13 @@ import {
   OnDestroy,
   ApplicationRef,
   AfterContentInit,
-  ViewEncapsulation
+  ViewEncapsulation,
+  Renderer2
 } from '@angular/core';
 import { Subject, fromEvent, interval, of, concat, merge, zip } from 'rxjs';
 import { DDirective } from './share/d.directive';
 import { mergeMapTo, mergeMap, map } from 'rxjs/operators';
+import { Entry1Component } from './entry1/entry1.component';
 // import { AComponent } from './share/a/a.component';
 
 const width = [1, 2, 3, 4, 5];
@@ -95,7 +97,7 @@ console.log(iceCream.flavor);
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.less']
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, AfterContentInit {
 
   moveData: { width: string, height: string }[] = (function g() {
     return width.map((w, idx) => {
@@ -131,7 +133,12 @@ export class AppComponent implements OnInit {
     input: null
   };
 
-  constructor() {
+  constructor(
+    private render: Renderer2,
+    private appRef: ApplicationRef,
+    private injector: Injector,
+    private componentFactoryResolver: ComponentFactoryResolver
+  ) {
     this.fetch((data: any[]) => {
       this.rows = data.splice(1, 20);
     });
@@ -155,6 +162,20 @@ export class AppComponent implements OnInit {
       .subscribe(x => {
         console.log(x);
       });
+  }
+
+  ngAfterContentInit() {
+    this.creatEntryComp();
+  }
+
+  private creatEntryComp() {
+    const container = document.querySelector('.entry-container');
+    // 生成Item组件并添加@input
+    const entry1Comp = this.componentFactoryResolver
+      .resolveComponentFactory(Entry1Component)
+      .create(this.injector);
+    this.render.appendChild(container, entry1Comp.location.nativeElement);
+    this.appRef.attachView(entry1Comp.hostView);
   }
 
   changeInput(n) {
