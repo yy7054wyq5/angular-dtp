@@ -23,7 +23,6 @@
 <scm-counter></scm-counter> -->
 <!-- behavior-subjects -->
 
-
 <div class="entry-container"></div>
 
 <button type="button" [routerLink]="['/extends-upload-comp']">go extends-upload-comp</button>
@@ -46,4 +45,4 @@
 	<ng-template #cdkDragPlaceholder></ng-template>
 </section>
 
-
+<button scmTtclick (ttclick)="tClick($event)">ttclick</button>

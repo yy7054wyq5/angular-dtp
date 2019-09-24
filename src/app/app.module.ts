@@ -45,6 +45,7 @@ import { MuiModule } from './components/mui/mui.module';
 import { TimeRangePickerComponent } from './time-range-picker/time-range-picker.component';
 import { Entry1Component } from './entry1/entry1.component';
 import { Entry2Component } from './entry2/entry2.component';
+import { TtclickDirective } from './ttclick.directive';
 
 export class AppRoutingCache implements RouteReuseStrategy {
 	public static handlers: { [key: string]: DetachedRouteHandle } = {};
@@ -135,6 +136,7 @@ const routes: Routes = [
 		TimeRangePickerComponent,
 		Entry1Component,
 		Entry2Component,
+		TtclickDirective,
 	],
 	imports: [
 		DragDropModule,
