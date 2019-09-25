@@ -9,6 +9,7 @@ export class TtclickDirective {
 	@HostListener('click', ['$event']) clicking(btn) {
 		console.log('里面click', btn);
 		this.ttclick.next(btn);
+		// dadad
 	}
 
 	constructor() {}
