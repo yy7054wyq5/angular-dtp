@@ -38,7 +38,6 @@
     "ng2-dragula": "^2.1.0",
     "ngx-datatable-wy": "^15.0.0",
     "rxjs": "~6.4.0",
-    "test": "^1.0.0",
     "tslib": "^1.9.0",
     "web-animations-js": "^2.3.1",
     "zone.js": "^0.8.29"
