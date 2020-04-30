@@ -21,6 +21,8 @@ export class ExtendsZorroUploadComponent implements OnInit {
   @Input()
   uploadComp: NzUploadComponent;
 
+  @Input() tpl;
+
   ///// 上传文件不自动上传 /////
   private get local() {
     return !this.nzBeforeUploadReturnValue ? true : false;

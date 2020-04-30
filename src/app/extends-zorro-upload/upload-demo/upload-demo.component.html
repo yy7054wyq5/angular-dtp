@@ -1,4 +1,4 @@
-<scm-extends-zorro-upload #extendsUpload [nzRemoveAction]="'dada'" [nzBeforeUploadReturnValue]="true" [nzFileListOnlyOneItem]="true">
+<scm-extends-zorro-upload #extendsUpload [nzRemoveAction]="'dada'" [nzBeforeUploadReturnValue]="true" [nzFileListOnlyOneItem]="true" [tpl]="tpl">
   <ng-template let-fileList="fileList">
     <nz-upload
       [nzMultiple]="true"
@@ -9,7 +9,11 @@
       [nzPreview]="extendsUpload.nzPreview"
       [nzRemove]="extendsUpload.nzRemove"
     >
-      <button nz-button type="button">点击上传</button>
+      <button nz-button type="button">点击上传1111111</button>
     </nz-upload>
   </ng-template>
 </scm-extends-zorro-upload>
+
+<ng-template #tpl>
+  dajkjdlas111111
+</ng-template>
