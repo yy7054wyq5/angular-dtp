@@ -46,6 +46,7 @@ import { TimeRangePickerComponent } from './time-range-picker/time-range-picker.
 import { Entry1Component } from './entry1/entry1.component';
 import { Entry2Component } from './entry2/entry2.component';
 import { TtclickDirective } from './ttclick.directive';
+import { UseTplInCompComponent } from './use-tpl-in-comp/use-tpl-in-comp.component';
 
 export class AppRoutingCache implements RouteReuseStrategy {
 	public static handlers: { [key: string]: DetachedRouteHandle } = {};
@@ -137,6 +138,7 @@ const routes: Routes = [
 		Entry1Component,
 		Entry2Component,
 		TtclickDirective,
+		UseTplInCompComponent,
 	],
 	imports: [
 		DragDropModule,
