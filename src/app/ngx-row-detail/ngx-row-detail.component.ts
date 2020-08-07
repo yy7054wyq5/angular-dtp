@@ -76,7 +76,7 @@ import { ViewEncapsulation, Component, ViewChild } from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class RowDetailsComponent {
-  @ViewChild('myTable') table: any;
+  @ViewChild('myTable', { static: true }) table: any;
 
   rows: any[] = [];
   expanded: any = {};

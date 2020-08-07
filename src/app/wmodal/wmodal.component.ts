@@ -29,7 +29,7 @@ export class WmodalComponent implements OnInit, AfterContentInit, OnDestroy {
   @Input() compParams: any;
   @Output() compOut = new EventEmitter<any>();
 
-  @ViewChild('container', { read: ViewContainerRef })
+  @ViewChild('container', { read: ViewContainerRef, static: true })
   container: ViewContainerRef;
 
   ngOnInit() {}

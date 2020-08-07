@@ -17,7 +17,7 @@ export class ExtendsZorroUploadComponent implements OnInit {
   ajaxing = false;
 
   ///// NzUploadComponent /////
-  @ContentChild(TemplateRef)
+  @ContentChild(TemplateRef, { static: true})
   @Input()
   uploadComp: NzUploadComponent;
 

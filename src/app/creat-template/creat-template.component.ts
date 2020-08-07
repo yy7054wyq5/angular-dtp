@@ -6,7 +6,7 @@ import { BrowserModule } from '@angular/platform-browser';
   templateUrl: './creat-template.component.html'
 })
 export class CreatTemplateComponent implements OnInit {
-  @ViewChild('container', { read: ViewContainerRef }) container: ViewContainerRef;
+  @ViewChild('container', { read: ViewContainerRef, static: true }) container: ViewContainerRef;
 
   constructor(private compiler: Compiler) {}
 

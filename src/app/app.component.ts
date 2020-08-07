@@ -120,9 +120,9 @@ export class AppComponent implements OnInit, AfterContentInit {
 
 	dyComponent;
 
-	@ViewChild(DDirective) dHost: DDirective;
+	@ViewChild(DDirective, { static: false }) dHost: DDirective;
 
-	@ViewChild('myTable') table: any;
+	@ViewChild('myTable', { static: false }) table: any;
 
 	rows: any[] = [];
 	expanded: any = {};

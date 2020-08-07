@@ -19,7 +19,7 @@ export class TestComponent implements OnInit {
   @Input() data: any;
   @Output() oclick = new EventEmitter<any>();
 
-  @ViewChild("ooo") ooo: TemplateRef<any>;
+  @ViewChild("ooo", { static: true }) ooo: TemplateRef<any>;
 
   ngOnInit() {}
 
