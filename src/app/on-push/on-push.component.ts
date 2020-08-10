@@ -11,7 +11,7 @@ export class OnPushComponent implements OnInit, OnChanges {
     this.cdr.detach();
   }
 
-  protected insertData;
+  insertData;
   @Input() data;
 
   // @Input() set data(data) {

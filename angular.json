@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "scm-auto-client": {
+    "wy-test": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -34,7 +34,7 @@
             "scripts": [
               "node_modules/crypto-js/crypto-js.js",
               "node_modules/lodash/lodash.min.js",
-              "node_modules/hammerjs/hammer.min.js",
+              
               "node_modules/muuri/dist/muuri.min.js"
             ]
           },
@@ -118,29 +118,29 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "scm-auto-client:build",
+            "browserTarget": "wy-test:build",
             "open": true
           },
           "configurations": {
             "production": {
-              "browserTarget": "scm-auto-client:build:production"
+              "browserTarget": "wy-test:build:production"
             },
             "hmr": {
               "hmr": true,
-              "browserTarget": "scm-auto-client:build:hmr"
+              "browserTarget": "wy-test:build:hmr"
             },
             "wyhmr": {
               "port": 4399,
               "hmr": true,
               "proxyConfig": "proxy.conf.json",
-              "browserTarget": "scm-auto-client:build:wyhmr"
+              "browserTarget": "wy-test:build:wyhmr"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "scm-auto-client:build"
+            "browserTarget": "wy-test:build"
           }
         },
         "test": {
@@ -153,7 +153,7 @@
             "scripts": [
               "node_modules/crypto-js/crypto-js.js",
               "node_modules/lodash/lodash.min.js",
-              "node_modules/hammerjs/hammer.min.js",
+              
               "node_modules/muuri/dist/muuri.min.js"
             ],
             "styles": [
@@ -181,7 +181,7 @@
         }
       }
     },
-    "scm-auto-client-e2e": {
+    "wy-test-e2e": {
       "root": "src",
       "sourceRoot": "e2e",
       "projectType": "application",
@@ -190,7 +190,7 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "./protractor.conf.js",
-            "devServerTarget": "scm-auto-client:serve"
+            "devServerTarget": "wy-test:serve"
           }
         },
         "lint": {
@@ -207,7 +207,7 @@
       }
     }
   },
-  "defaultProject": "scm-auto-client",
+  "defaultProject": "wy-test",
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "scm",

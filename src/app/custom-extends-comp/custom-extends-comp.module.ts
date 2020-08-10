@@ -7,8 +7,8 @@ import { FormsModule } from '@angular/forms';
 import { NgZorroAntdModule } from 'ng-zorro-antd';
 
 @NgModule({
-  imports: [CommonModule, FormsModule, NgZorroAntdModule],
-  declarations: [ToggleComponent, ToggleDirective, IndexComponent],
-  exports: [IndexComponent]
+    imports: [CommonModule, FormsModule, NgZorroAntdModule],
+    declarations: [ToggleComponent, ToggleDirective, IndexComponent],
+    exports: [IndexComponent],
 })
 export class CustomExtendsCompModule {}

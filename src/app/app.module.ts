@@ -13,7 +13,6 @@ import { AComponent } from './share/a/a.component';
 import { DDirective } from './share/d.directive';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { RowDetailsComponent } from './ngx-row-detail/ngx-row-detail.component';
-import { TestNzSelectComponent } from './test-nz-select/test-nz-select.component';
 import { TestNgxTableComponent } from './test-ngx-table/test-ngx-table.component';
 import { TestNgxTableSummaryComponent } from './test-ngx-table-summary/test-ngx-table-summary.component';
 import { TreeViewComponent } from './tree-view/tree-view.component';
@@ -28,7 +27,7 @@ import { Routes, RouterModule, RouteReuseStrategy } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { IndexComponent } from './custom-extends-comp/index/index.component';
 import { CustomExtendsCompModule } from './custom-extends-comp/custom-extends-comp.module';
-import { ExtendsZorroUploadComponent } from './extends-zorro-upload/extends-zorro-upload.component';
+import { ExtZorroUploadComponent } from './extends-zorro-upload/extends-zorro-upload.component';
 import { UploadDemoComponent } from './extends-zorro-upload/upload-demo/upload-demo.component';
 import { StoreModule } from '@ngrx/store';
 import { reducers, metaReducers } from './reducers';
@@ -42,7 +41,6 @@ registerLocaleData(zh);
 // 路由缓存策略，未实装
 import { DefaultUrlSerializer, ActivatedRouteSnapshot, DetachedRouteHandle } from '@angular/router';
 import { MuiModule } from './components/mui/mui.module';
-import { TimeRangePickerComponent } from './time-range-picker/time-range-picker.component';
 import { Entry1Component } from './entry1/entry1.component';
 import { Entry2Component } from './entry2/entry2.component';
 import { TtclickDirective } from './ttclick.directive';
@@ -120,7 +118,6 @@ const routes: Routes = [
         AComponent,
         DDirective,
         RowDetailsComponent,
-        TestNzSelectComponent,
         TestNgxTableComponent,
         TestNgxTableSummaryComponent,
         TreeViewComponent,
@@ -132,11 +129,10 @@ const routes: Routes = [
         Wmodal2Component,
         OnPushComponent,
         HomeComponent,
-        ExtendsZorroUploadComponent,
+        ExtZorroUploadComponent,
         UploadDemoComponent,
         CounterComponent,
         CdkIndexComponent,
-        TimeRangePickerComponent,
         Entry1Component,
         Entry2Component,
         TtclickDirective,
