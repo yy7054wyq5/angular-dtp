@@ -1,10 +1,9 @@
-// .prettierrc.js
 module.exports = {
     singleQuote: true,
     // 一行最多 100 字符
     printWidth: 100,
     // 使用 4 个空格缩进
-    tabWidth: 4,
+    tabWidth: 2,
     // 行尾需要有分号
     semi: true,
     // 对象的 key 仅在必要时用引号

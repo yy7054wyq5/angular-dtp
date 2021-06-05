@@ -49,9 +49,9 @@ export class ExtZorroUploadComponent implements OnInit {
     ///// 移除文件 /////
     private _nzRemoveAction: string;
     @Input() set nzRemoveAction(action: string) {
-        this._nzRemoveAction = action || this.uploadComp.nzAction;
+        this._nzRemoveAction = action;
     }
-    get nzRemoveAction() {
+    get nzRemoveAction(): string {
         return this._nzRemoveAction;
     }
     @Input() nzRemoveMethod = 'delete';
